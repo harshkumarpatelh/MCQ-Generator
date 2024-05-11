@@ -51,6 +51,7 @@ def live_generator(file,count,subject,tone,button):
                         table_data = get_table_data(quiz)
                         if table_data is not None:
                             df = pd.DataFrame(table_data,index =None)
+                            df.index = df.index+1
                             st.table(df)
                             # Display the review in text box
                             st.text_area(label = "Review", value = response['review'])

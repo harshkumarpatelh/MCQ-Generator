@@ -33,6 +33,6 @@ def get_table_data(quiz_str):
             ]
         )
         correct = value['correct']
-        quiz_table.append({"Q.NO.":QNO,"MCQ":mcq,"Choices":options,"Correct":correct})
+        quiz_table.append({"MCQ":mcq,"Choices":options,"Correct":correct})
     
     return quiz_table
