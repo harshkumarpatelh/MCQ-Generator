@@ -6,8 +6,6 @@ from langchain.chains.sequential import SequentialChain
 from langchain.callbacks import get_openai_callback
 import json
 import os
-import pandas as pd
-import traceback
 from dotenv import load_dotenv   
 import PyPDF2
 
