@@ -19,6 +19,8 @@ llm = ChatOpenAI(openai_api_key = key, model_name='gpt-3.5-turbo',temperature =0
 with open('./Response.json','r') as f:
     RESPONSE_JSON = json.load(f)
 
+RESPONSE_JSON = json.dumps(RESPONSE_JSON)
+
 template =  """
 Text:{text}
 You are an expert MCQ maker. Given the above text, it is your job to \
