@@ -3,7 +3,6 @@ import json
 from langchain.callbacks import get_openai_callback
 from src.mcqgenerator.mcqgenerator import generate_evaluate_chain
 from src.mcqgenerator.utils import read_file, get_table_data
-from src.mcqgenerator.PDFGenerator import create_pdf
 import traceback
 import pandas as pd
 
@@ -53,10 +52,6 @@ def live_generator(file,count,subject,tone,button):
                         if table_data is not None:
                             df = pd.DataFrame(table_data,index =None)
                             st.table(df)
-                            if st.button('Download PDF'):
-                                filename = subject + ".pdf"
-                                create_pdf(df,filename)
-                                st.success('PDF file has been downloaded!')
                             # Display the review in text box
                             st.text_area(label = "Review", value = response['review'])
                         else:
