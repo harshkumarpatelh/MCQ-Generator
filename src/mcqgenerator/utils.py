@@ -6,9 +6,11 @@ import traceback
 def read_file(file):
     if file.name.endswith('.pdf'):
         try:
-            pdf_reader = PyPDF2.PdfFileReader(file)
             text = ""
-            for page in pdf_reader.pages:
+            pdf_reader = PyPDF2.PdfReader(file)
+            num_pages = len(pdf_reader.pages)
+            for page_number in range(num_pages):
+                page = pdf_reader.pages[page_number]
                 text += page.extract_text()
             return text
         except Exception as e:
