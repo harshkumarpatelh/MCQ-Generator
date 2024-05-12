@@ -1,5 +1,5 @@
 from langchain_community.llms import OpenAI #deprecated from langchain.llms import OpenAI for langchain==0.2.0.
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains.sequential import SequentialChain
@@ -7,7 +7,6 @@ from langchain.callbacks import get_openai_callback
 import json
 import os
 from dotenv import load_dotenv   
-import PyPDF2
 
 load_dotenv()
 key = os.getenv('openai_key')
