@@ -15,8 +15,10 @@ key = os.getenv('openai_key')
 # creating LLM object
 llm = ChatOpenAI(openai_api_key = key, model_name='gpt-3.5-turbo',temperature =0.7)
 
-with open('F:/ML/NLP/MCQ-Generator/Response.json','r') as f:
+with open('./Response.json','r') as f:
     RESPONSE_JSON = json.load(f)
+
+RESPONSE_JSON = json.dumps(RESPONSE_JSON)
 
 template =  """
 Text:{text}

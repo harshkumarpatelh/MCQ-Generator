@@ -7,7 +7,7 @@ import traceback
 import pandas as pd
 
 # loading output json file format
-with open('F:/ML/NLP/MCQ-Generator/Response.json','r') as f:
+with open('./Response.json','r') as f:
     RESPONSE_JSON = json.load(f)
 # converting file into json format
 RESPONSE_JSON = json.dumps(RESPONSE_JSON)
