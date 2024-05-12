@@ -3,7 +3,6 @@ from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.chains.sequential import SequentialChain
-from langchain.callbacks import get_openai_callback
 import json
 import os
 from dotenv import load_dotenv   
